@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Drawings | Alex Gleeson</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">AG</a>
+        <div class="nav-links">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-hero">
+            <div class="blueprint-container">
+                <div class="project-title-group">
+                    <h1 class="technical-title">Product Drawings</h1>
+                    <div class="technical-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-pencil-ruler"></i>
+                            Drawing Process
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-drafting-compass"></i>
+                            Technical Development
+                        </span>
+                        <a href="#" class="spec-item download-pdf" onclick="downloadPDF()">
+                            <i class="fas fa-file-pdf"></i>
+                            Download Specifications
+                            <div class="download-indicator">
+                                <div class="progress-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="blueprint-container">
+                <!-- Process Description -->
+                <div class="process-section">
+                    <h2 class="technical-subtitle">Drawing Development Process</h2>
+                    <div class="process-card">
+                        <div class="process-step">
+                            <div class="step-number">01</div>
+                            <div class="step-content">
+                                <h3>Real-World Observation</h3>
+                                <p>Throughout my A-Level product design course, I have developed my drawings by basing them on products that I have seen or used in person.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">02</div>
+                            <div class="step-content">
+                                <h3>Initial Development</h3>
+                                <p>Firstly, I make a rough sketch in pencil and get it to the shape I want. I then use pen to go over it and add fine detail to the sketch of the product.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drawing Examples -->
+                <div class="pinboard">
+                    <div class="sketch-grid">
+                        <div class="sketch-item">
+                            <div class="sketch-content">
+                                <div class="pin"></div>
+                                <img src="images/chair.png" alt="Chair Design Sketch">
+                                <div class="sketch-details">
+                                    <span class="sketch-number">01</span>
+                                    <span class="sketch-type">Chair Design Study</span>
+                                </div>
+                                <p class="sketch-description">Ergonomic chair design focusing on form and structure</p>
+                            </div>
+                        </div>
+                        
+                        <div class="sketch-item">
+                            <div class="sketch-content">
+                                <div class="pin"></div>
+                                <img src="images/desklamp.png" alt="Desk Lamp Design">
+                                <div class="sketch-details">
+                                    <span class="sketch-number">02</span>
+                                    <span class="sketch-type">Lighting Design</span>
+                                </div>
+                                <p class="sketch-description">Adjustable desk lamp with articulated arm mechanism</p>
+                            </div>
+                        </div>
+
+                        <div class="sketch-item">
+                            <div class="sketch-content">
+                                <div class="pin"></div>
+                                <img src="images/seatdesklamp.png" alt="Seating and Lighting Set">
+                                <div class="sketch-details">
+                                    <span class="sketch-number">03</span>
+                                    <span class="sketch-type">Furniture Set</span>
+                                </div>
+                                <p class="sketch-description">Integrated seating and lighting arrangement study</p>
+                            </div>
+                        </div>
+
+                        <div class="sketch-item">
+                            <div class="sketch-content">
+                                <div class="pin"></div>
+                                <img src="images/sofa.png" alt="Sofa Design">
+                                <div class="sketch-details">
+                                    <span class="sketch-number">04</span>
+                                    <span class="sketch-type">Sofa Design</span>
+                                </div>
+                                <p class="sketch-description">Modular sofa concept with emphasis on comfort</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Details -->
+                <div class="details-section">
+                    <h2 class="technical-subtitle">Drawing Specifications</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <i class="fas fa-pencil-alt"></i>
+                            <h4>Drawing Methods</h4>
+                            <ul class="technical-list">
+                                <li>Initial Pencil Sketching</li>
+                                <li>Fine Detail Pen Work</li>
+                                <li>Furniture Design</li>
+                            </ul>
+                        </div>
+                        <div class="spec-card">
+                            <i class="fas fa-search"></i>
+                            <h4>Focus Areas</h4>
+                            <ul class="technical-list">
+                                <li>Ergonomic Design</li>
+                                <li>Lighting Integration</li>
+                                <li>Seating Comfort</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const downloadBtn = document.querySelector('.download-pdf');
+            downloadBtn.classList.add('downloading');
+            
+            // Here you would add the actual PDF download logic
+            // For now, this is just the animation
+            setTimeout(() => {
+                downloadBtn.classList.remove('downloading');
+                // Trigger actual download here
+            }, 1000);
+        }
+    </script>
+</body>
+</html> 

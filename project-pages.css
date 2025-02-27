@@ -1,0 +1,1259 @@
+/* Project Page Specific Styles */
+.project-hero {
+    padding: 8rem 2rem 4rem;
+    background: var(--background);
+}
+
+.project-title-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.technical-specs {
+    display: flex;
+    gap: 1rem;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.spec-item i {
+    color: var(--secondary);
+}
+
+/* Timeline Styles */
+.timeline-section {
+    padding: 2rem 0;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--primary);
+    opacity: 0.3;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2.35rem;
+    width: 1rem;
+    height: 1rem;
+    background: var(--secondary);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-left: 1rem;
+}
+
+.timeline-content h3 {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 300px;
+    background: rgba(44, 62, 80, 0.05);
+    border: 2px dashed var(--primary);
+    border-radius: 5px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technical-description {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Technical Details Section */
+.details-section {
+    padding: 2rem 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spec-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+
+.spec-card i {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.spec-card h4 {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Back Link */
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.back-link i {
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover i {
+    transform: translateX(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-title-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .technical-specs {
+        flex-direction: column;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+    }
+
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pinboard Layout */
+.pinboard {
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.sketch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background: #fff5e6;  /* Slight cork-board color */
+    border: 20px solid #8b4513;  /* Wood-like border */
+    border-radius: 5px;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.1);
+}
+
+.sketch-item {
+    position: relative;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+}
+
+.sketch-item:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.sketch-item:hover {
+    transform: rotate(0) scale(1.02);
+    z-index: 2;
+}
+
+.sketch-content {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.pin {
+    width: 20px;
+    height: 20px;
+    background: var(--secondary);
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.pin::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+}
+
+.sketch-content img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 1rem;
+}
+
+.sketch-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.sketch-number {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.sketch-type {
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Pinboard */
+@media (max-width: 768px) {
+    .sketch-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .sketch-item {
+        transform: none !important;
+    }
+    
+    .sketch-item:hover {
+        transform: scale(1.02) !important;
+    }
+}
+
+/* Specific sketch adjustments */
+.sketch-item:nth-child(1) .sketch-content {
+    background: #f8f8f8;
+}
+
+.sketch-item:nth-child(2) .sketch-content,
+.sketch-item:nth-child(3) .sketch-content {
+    background: #f5f5f5;
+}
+
+.sketch-item:nth-child(4) .sketch-content {
+    background: #f8f8f8;
+}
+
+/* Process Section Styles */
+.process-section {
+    margin-bottom: 3rem;
+}
+
+.process-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.process-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.process-step:last-child {
+    margin-bottom: 0;
+}
+
+.process-step::after {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 3rem;
+    bottom: -2rem;
+    width: 2px;
+    background: var(--secondary);
+    opacity: 0.3;
+}
+
+.process-step:last-child::after {
+    display: none;
+}
+
+.step-number {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    color: var(--secondary);
+    font-weight: bold;
+    min-width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    background: white;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.sketch-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .process-step {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .process-step::after {
+        left: 2rem;
+        top: 4rem;
+    }
+
+    .step-number {
+        margin-left: 1rem;
+    }
+}
+
+/* PDF Download Styles */
+.download-pdf {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.download-pdf i {
+    margin-right: 0.5rem;
+    color: var(--secondary);
+}
+
+.download-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(44, 62, 80, 0.1);
+    overflow: hidden;
+}
+
+.progress-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.download-pdf:hover .progress-line {
+    transform: translateX(0);
+}
+
+.download-pdf:hover {
+    background: rgba(44, 62, 80, 0.05);
+}
+
+/* Animation for download progress */
+@keyframes downloadProgress {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+.downloading .progress-line {
+    animation: downloadProgress 1s linear;
+}
+
+/* Development Timeline Styles */
+.development-timeline {
+    margin: 4rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.timeline-item {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.phase-number {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    color: var(--secondary);
+    font-weight: bold;
+    min-width: 3rem;
+}
+
+.timeline-header h3 {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+}
+
+.blueprint-frame {
+    background: #f8f9fa;
+    border: 2px solid var(--primary);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blueprint-frame img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.frame-details {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.detail-value {
+    color: var(--primary);
+}
+
+/* Project Introduction Styles */
+.project-intro {
+    margin-bottom: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-card {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-item {
+        padding: 1rem;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Detail Section Styles */
+.detail-section {
+    margin: 3rem auto;
+    max-width: 900px;
+}
+
+.detail-card {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 2rem;
+    position: relative;
+}
+
+.detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--secondary) 0,
+        var(--secondary) 4px,
+        transparent 4px,
+        transparent 8px
+    );
+}
+
+/* Adjust the last item in 5-item grid */
+.sketch-grid:has(.sketch-item:nth-child(5)) .sketch-item:last-child {
+    grid-column: 2;
+}
+
+@media (max-width: 1200px) {
+    .sketch-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Reset last item position on smaller screens */
+    .sketch-grid:has(.sketch-item:nth-child(5)) .sketch-item:last-child {
+        grid-column: auto;
+    }
+}
+
+/* Physical Modeling Gallery Styles */
+.modeling-gallery {
+    margin: 3rem 0;
+}
+
+.gallery-item.sketch {
+    margin-bottom: 2rem;
+}
+
+.blueprint-frame.large {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.development-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+}
+
+.stage-marker {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments for gallery */
+@media (max-width: 1200px) {
+    .development-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .development-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Research Document Styles */
+.research-document {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 3rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    position: relative;
+    background-image: 
+        linear-gradient(#2c3e5011 1px, transparent 1px),
+        linear-gradient(90deg, #2c3e5011 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.document-details {
+    display: flex;
+    gap: 2rem;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+.document-details span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-right: 1px solid var(--primary);
+}
+
+.document-details span:last-child {
+    border-right: none;
+}
+
+.document-details span::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--secondary);
+    border-radius: 50%;
+}
+
+.document-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-number {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5rem;
+    color: var(--secondary);
+    opacity: 0.3;
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.section-content h2 {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.5rem;
+}
+
+.analysis-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.item-header {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--secondary);
+}
+
+.technical-description {
+    line-height: 1.6;
+}
+
+.technical-note {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-left: 3px solid var(--secondary);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+
+.conclusion-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.conclusion-item {
+    padding: 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.conclusion-item h3 {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Product Analysis Cards */
+.product-analysis {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-analysis h3 {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.5rem;
+}
+
+.product-image {
+    margin: 1.5rem 0;
+    border: 1px solid var(--primary);
+    padding: 1rem;
+    background: #f8f9fa;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 300px;
+}
+
+/* Sketch Analysis */
+.sketch-analysis {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.sketch-image {
+    margin: 1.5rem 0;
+    border: 1px solid var(--primary);
+    padding: 1rem;
+    background: #f8f9fa;
+}
+
+.sketch-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 400px;
+}
+
+.sketch-analysis p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Technical Diagrams - New Icon Based Style */
+.technical-diagram {
+    height: 150px;
+    background: #f8f9fa;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    padding: 1rem;
+    position: relative;
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+.diagram-grid {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: 
+        linear-gradient(#2c3e5011 1px, transparent 1px),
+        linear-gradient(90deg, #2c3e5011 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.product-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-icon i {
+    font-size: 2rem;
+    color: var(--secondary);
+    transition: all 0.3s ease;
+}
+
+/* Product 1 Icons */
+.wall-icon {
+    opacity: 0.3;
+}
+
+.hook-icon {
+    animation: hook 2s ease-in-out infinite;
+}
+
+.support-icon {
+    transform: rotate(90deg);
+}
+
+/* Product 2 Icons */
+.curved-icon {
+    transform: rotate(-45deg);
+    animation: wave 3s ease-in-out infinite;
+}
+
+.grid-icon {
+    opacity: 0.3;
+    font-size: 1.5rem;
+}
+
+/* Product 3 Icons */
+.wheel-icon {
+    animation: rotate 4s linear infinite;
+}
+
+.adjust-icon {
+    animation: adjust 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes hook {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.1); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes adjust {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+/* Research Page Styles */
+.research-overview {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.overview-icon {
+    font-size: 2.5rem;
+    color: var(--secondary);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    margin: 3rem 0 2rem;
+}
+
+.section-title i {
+    color: var(--secondary);
+}
+
+.finding-card {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.finding-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.finding-header i {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+}
+
+.finding-icons {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.finding-icons i {
+    font-size: 2rem;
+    color: var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.conclusion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.conclusion-card {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.conclusion-card i {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Process Buttons */
+.process-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.process-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.process-button i {
+    color: var(--secondary);
+}
+
+.process-button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.process-button:hover i {
+    color: white;
+}
+
+/* Design Process Header Styles */
+.design-process-header {
+    padding: 2rem 0;
+    background: var(--background);
+}
+
+.section-title {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-divider {
+    height: 2px;
+    background: var(--secondary);
+    margin: 0.5rem 0 2rem;
+    width: 100px;
+}
+
+.process-category {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-marker {
+    color: var(--secondary);
+}
+
+.category-title {
+    color: var(--secondary);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.process-card {
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.header-icon {
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+.view-link {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary);
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.card-tags {
+    display: flex;
+    gap: 1rem;
+}
+
+.tag {
+    background: var(--background);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+}
+
+/* Project Section Styles */
+.project-section {
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--primary);
+}
+
+.project-title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Work Experience Specific Styles */
+.work-experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #f5f5f5;
+    border: 15px solid #34495e;
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Section titles in grid */
+.pinboard-section-title {
+    grid-column: 1 / -1;
+    margin: 2rem 0 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px dashed var(--secondary);
+    text-align: center;
+    transform: rotate(-1deg);
+    z-index: 2;
+}
+
+.sketch-item {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+/* Adjust image heights */
+.sketch-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.rotated-left {
+    transform: rotate(-3deg);
+}
+
+.rotated-right {
+    transform: rotate(3deg);
+}
+
+.skills-section {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Project Tags */
+.tag-container {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.project-tag {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-tag:first-child {
+    background: #2c3e50;
+}
+
+.project-tag:nth-child(2) {
+    background: #34495e;
+}
+
+.project-tag:nth-child(3) {
+    background: #2980b9;
+} 

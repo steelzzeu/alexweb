@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Mapping | Alex Gleeson</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">AG</a>
+        <div class="nav-links">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-hero">
+            <div class="blueprint-container">
+                <div class="project-title-group">
+                    <h1 class="technical-title">Mind Mapping</h1>
+                    <div class="technical-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-lightbulb"></i>
+                            Ideation Process
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-brain"></i>
+                            Concept Development
+                        </span>
+                        <a href="#" class="spec-item download-pdf" onclick="downloadPDF()">
+                            <i class="fas fa-file-pdf"></i>
+                            Download Mind Maps
+                            <div class="download-indicator">
+                                <div class="progress-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="blueprint-container">
+                <!-- Project Introduction -->
+                <div class="project-intro">
+                    <div class="intro-card">
+                        <h2 class="technical-subtitle">Mind Mapping Process</h2>
+                        <p class="technical-description">Throughout the course, mind mapping has helped me a lot. I realised that by making mind maps I allowed myself to spill all of my ideas of improvement onto a page where I could then choose the best and add it to my final product.</p>
+                    </div>
+                </div>
+
+                <!-- Mind Maps Display -->
+                <div class="development-timeline">
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="phase-number">01</span>
+                                <h3>Initial Mind Map</h3>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="blueprint-frame">
+                                    <img src="images/mindmap.png" alt="Initial Mind Mapping Process">
+                                    <div class="frame-details">
+                                        <span class="detail-label">Phase:</span>
+                                        <span class="detail-value">Concept Generation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="phase-number">02</span>
+                                <h3>Developed Mind Map</h3>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="blueprint-frame">
+                                    <img src="images/mindmap2.png" alt="Developed Mind Mapping">
+                                    <div class="frame-details">
+                                        <span class="detail-label">Phase:</span>
+                                        <span class="detail-value">Idea Refinement</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Specifications -->
+                <div class="details-section">
+                    <h2 class="technical-subtitle">Process Benefits</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <i class="fas fa-sitemap"></i>
+                            <h4>Mind Mapping Benefits</h4>
+                            <ul class="technical-list">
+                                <li>Idea Organization</li>
+                                <li>Visual Connections</li>
+                                <li>Concept Development</li>
+                            </ul>
+                        </div>
+                        <div class="spec-card">
+                            <i class="fas fa-tasks"></i>
+                            <h4>Process Outcomes</h4>
+                            <ul class="technical-list">
+                                <li>Clear Documentation</li>
+                                <li>Idea Selection</li>
+                                <li>Project Direction</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const downloadBtn = document.querySelector('.download-pdf');
+            downloadBtn.classList.add('downloading');
+            setTimeout(() => {
+                downloadBtn.classList.remove('downloading');
+            }, 1000);
+        }
+    </script>
+</body>
+</html> 

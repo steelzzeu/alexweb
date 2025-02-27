@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Gleeson | Product Design Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile Warning Popup -->
+    <div id="mobilePopup" class="mobile-popup" style="display: none;">
+        <div class="popup-content">
+            <p>This website hasn't been optimized for mobile devices.<br>Please view on desktop for the best experience.</p>
+            <button id="closePopup" class="technical-button">
+                <i class="fas fa-check"></i>
+                Okay
+            </button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">AG</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="blueprint-grid">
+                    <h1 class="blueprint-text">Alex Gleeson</h1>
+                    <p class="blueprint-subtitle">Product Designer & Maker</p>
+                </div>
+                <div class="tools">
+                    <div class="tool-container">
+                        <i class="fas fa-ruler tool-icon"></i>
+                        <div class="measurement-line"></div>
+                    </div>
+                    <div class="tool-container">
+                        <i class="fas fa-hammer tool-icon"></i>
+                        <div class="tool-animation"></div>
+                    </div>
+                    <div class="tool-container">
+                        <i class="fas fa-drafting-compass tool-icon"></i>
+                        <div class="compass-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="search" class="search-section">
+            <div class="blueprint-container search-blueprint">
+                <div class="technical-overlay">
+                    <h3 class="search-title">Technical Specifications Search</h3>
+                    <div class="search-grid">
+                        <div class="search-category">
+                            <label class="technical-label">
+                                <span class="label-text">Skills</span>
+                                <div class="technical-select">
+                                    <select id="skillFilter">
+                                        <option value="all">All Skills</option>
+                                        <option value="assembly">Assembly & Construction</option>
+                                        <option value="technical">Technical Skills</option>
+                                        <option value="practical">Practical Skills</option>
+                                        <option value="design">Design Process</option>
+                                        <option value="professional">Professional Experience</option>
+                                        <option value="client">Client Interaction</option>
+                                        <option value="documentation">Documentation</option>
+                                        <option value="modeling">3D & Physical Modeling</option>
+                                    </select>
+                                    <div class="select-arrow"></div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="search-category">
+                            <label class="technical-label">
+                                <span class="label-text">Project Type</span>
+                                <div class="technical-select">
+                                    <select id="projectFilter">
+                                        <option value="all">All Projects</option>
+                                        <option value="major">Major Project</option>
+                                        <option value="design">Product Design</option>
+                                        <option value="development">Development</option>
+                                    </select>
+                                    <div class="select-arrow"></div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="search-category">
+                            <label class="technical-label">
+                                <span class="label-text">Technical Search</span>
+                                <div class="search-input-wrapper">
+                                    <input type="text" id="quickSearch" placeholder="Search specifications..." class="technical-input">
+                                    <div class="measurement-marks"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="search-results">
+                        <div class="results-display">
+                            <div class="result-count">
+                                <span class="counter">All</span>
+                                <span class="unit">items shown</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="blueprint-container">
+                <h2 class="technical-title">Design Process & Projects</h2>
+                
+                <!-- Ideation & Concept Development Section -->
+                <div class="project-category ideation">
+                    <h3 class="technical-subtitle">Ideation & Concept Development</h3>
+                    <div class="project-grid">
+                        <a href="mind-mapping.html" class="project-card" data-project="design" data-skills="concept,design,documentation">
+                            <div class="project-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Mind Mapping & Idea Pages</h4>
+                                <span class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Development Process
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="blueprint-overlay"></div>
+                                <div class="technical-details">
+                                    <span class="detail-item">Concept Development</span>
+                                    <span class="detail-item">Initial Ideas</span>
+                                    <span class="detail-item">Design Evolution</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="lighting-project.html" class="project-card" data-project="design" data-skills="technical,design,practical">
+                            <div class="project-header">
+                                <i class="fas fa-solar-panel"></i>
+                                <h4>Lighting project ideas and modelling</h4>
+                                <span class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Development Process
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="blueprint-overlay"></div>
+                                <div class="technical-details">
+                                    <span class="detail-item">Solar Energy</span>
+                                    <span class="detail-item">Camping Light</span>
+                                    <span class="detail-item">Product Design</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Technical Drawing Section -->
+                <div class="project-category technical-drawings">
+                    <h3 class="technical-subtitle">Technical Documentation</h3>
+                    <div class="project-grid">
+                        <a href="orthographic.html" class="project-card" data-project="technical" data-skills="technical,documentation">
+                            <div class="project-header">
+                                <i class="fas fa-drafting-compass"></i>
+                                <h4>Orthographic Projections</h4>
+                                <span class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Technical Drawings
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="blueprint-overlay"></div>
+                                <div class="technical-details">
+                                    <span class="detail-item">Technical Drawing</span>
+                                    <span class="detail-item">Orthographic</span>
+                                    <span class="detail-item">Documentation</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="product-drawings.html" class="project-card" data-project="technical" data-skills="technical,documentation">
+                            <div class="project-header">
+                                <i class="fas fa-ruler-combined"></i>
+                                <h4>Product Drawings</h4>
+                                <span class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Product Details
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="blueprint-overlay"></div>
+                                <div class="technical-details">
+                                    <span class="detail-item">Product Details</span>
+                                    <span class="detail-item">Technical Specs</span>
+                                    <span class="detail-item">Documentation</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 3D Development Section -->
+                <div class="project-category modeling">
+                    <h3 class="technical-subtitle">3D Development</h3>
+                    <div class="project-grid">
+                        <a href="3d-sketches.html" class="project-card" data-project="development" data-skills="modeling,design">
+                            <div class="project-header">
+                                <i class="fas fa-cube"></i>
+                                <h4>3D Sketches</h4>
+                                <span class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View 3D Process
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="blueprint-overlay"></div>
+                                <div class="technical-details">
+                                    <span class="detail-item">3D Modeling</span>
+                                    <span class="detail-item">Digital Design</span>
+                                    <span class="detail-item">Development</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="physical-modeling.html" class="project-card" data-project="development" data-skills="modeling,practical">
+                            <div class="project-header">
+                                <i class="fas fa-tools"></i>
+                                <h4>Physical Modeling</h4>
+                                <span class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Build Process
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="blueprint-overlay"></div>
+                                <div class="technical-details">
+                                    <span class="detail-item">Physical Models</span>
+                                    <span class="detail-item">Prototyping</span>
+                                    <span class="detail-item">Construction</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Major Projects Section -->
+                <div class="project-category major-projects">
+                    <h3 class="technical-subtitle">Major Projects</h3>
+                    <div class="project-grid">
+                        <a href="major-project.html" class="project-card" data-project="major" data-skills="design,development">
+                            <div class="project-header">
+                                <i class="fas fa-bicycle"></i>
+                                <h4>Bike Stand Project</h4>
+                                <span class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Development Process
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="blueprint-overlay"></div>
+                                <div class="technical-details">
+                                    <span class="detail-item">Major Project</span>
+                                    <span class="detail-item">Product Design</span>
+                                    <span class="detail-item">Development</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Research & Experience Section -->
+                <div class="project-category research">
+                    <h3 class="technical-subtitle">Research & Professional Experience</h3>
+                    <div class="project-grid">
+                        <a href="research.html" class="project-card" data-project="research" data-skills="documentation,technical">
+                            <div class="project-header">
+                                <i class="fas fa-search"></i>
+                                <h4>Research Documentation</h4>
+                                <span class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Research
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="blueprint-overlay"></div>
+                                <div class="technical-details">
+                                    <span class="detail-item">Research</span>
+                                    <span class="detail-item">Analysis</span>
+                                    <span class="detail-item">Documentation</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="work-experience.html" class="project-card" data-project="experience" data-skills="professional,client">
+                            <div class="project-header">
+                                <i class="fas fa-briefcase"></i>
+                                <h4>Work Experience</h4>
+                                <span class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Experience
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="blueprint-overlay"></div>
+                                <div class="technical-details">
+                                    <span class="detail-item">Professional</span>
+                                    <span class="detail-item">Product Design</span>
+                                    <span class="detail-item">Development</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="blueprint-container">
+                <h2 class="technical-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-section education">
+                        <h3 class="technical-subtitle">Current Education</h3>
+                        <div class="technical-content">
+                            <p>I am currently an A-level student at High Storrs School, studying:</p>
+                            <ul class="technical-list">
+                                <li>Product Design</li>
+                                <li>English Language</li>
+                                <li>Sociology</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="about-section aspirations">
+                        <h3 class="technical-subtitle">Career Aspirations</h3>
+                        <div class="technical-content">
+                            <p>I am currently studying product design A-level which, out of my three options, is the subject I want to continue into higher education. Throughout my studies I have come to realise that designing and creating a product that could help someone else is what really excites me. The work experience I did, which I have shown on slide 12 and 13, let me help to fulfil the design needs of clients, seeing their joy when the design was complete has encouraged my passion in product design.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-section experience">
+                        <h3 class="technical-subtitle">Experience & Growth</h3>
+                        <div class="technical-content">
+                            <p>Through both my A-level course and my work experience, I have become more aware of the details involved in product design. The appearance and utility of a product is now something I am constantly aware of – noting examples of both good design and those which could be improved!</p>
+                            <p>I am really looking forward to continuing my studies in this field and hopefully pursuing a career in product design.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-section contact-info">
+                        <h3 class="technical-subtitle">Contact Information</h3>
+                        <div class="technical-content">
+                            <p>Email: <a href="mailto:Agleeson118@outlook.com">Agleeson118@outlook.com</a></p>
+                            <p>Phone: 07496714289</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="technical-footer">
+        <div class="blueprint-container">
+            <div class="footer-section ucas-info">
+                <h3 class="technical-subtitle">UCAS Information</h3>
+                <div class="technical-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Full Name:</span>
+                        <span class="detail-value">Alexander James Gleeson</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">UCAS ID:</span>
+                        <span class="detail-value">1886670402</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <div class="measurement-line"></div>
+                <p>© 2025 All rights reserved</p>
+                <div class="measurement-line"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

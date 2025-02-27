@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Modeling | Alex Gleeson</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">AG</a>
+        <div class="nav-links">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-hero">
+            <div class="blueprint-container">
+                <div class="project-title-group">
+                    <h1 class="technical-title">Physical Modeling</h1>
+                    <div class="technical-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-cube"></i>
+                            Prototype Development
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-tools"></i>
+                            Physical Construction
+                        </span>
+                        <a href="#" class="spec-item download-pdf" onclick="downloadPDF()">
+                            <i class="fas fa-file-pdf"></i>
+                            Download Documentation
+                            <div class="download-indicator">
+                                <div class="progress-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="blueprint-container">
+                <!-- Project Introduction -->
+                <div class="project-intro">
+                    <div class="intro-card">
+                        <h2 class="technical-subtitle">Project Overview</h2>
+                        <p class="technical-description">As a part of the major project, I had a lot of time to develop the product. Here I have chosen photos which show different stages of creating my prototype and I have also included the original sketch of what I want to create.</p>
+                    </div>
+                </div>
+
+                <!-- Physical Modeling Gallery -->
+                <div class="modeling-gallery">
+                    <!-- Original Sketch -->
+                    <div class="gallery-item sketch">
+                        <div class="blueprint-frame large">
+                            <img src="images/majorproject/4th.png" alt="Original Design Sketch">
+                            <div class="frame-details">
+                                <span class="detail-label">Phase:</span>
+                                <span class="detail-value">Initial Design Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Grid -->
+                    <div class="development-grid">
+                        <div class="gallery-item">
+                            <div class="blueprint-frame">
+                                <img src="images/modelling/1.png" alt="Initial Frame Construction">
+                                <div class="stage-marker">Frame Assembly</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="blueprint-frame">
+                                <img src="images/modelling/2.png" alt="Support Structure">
+                                <div class="stage-marker">Support Structure</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="blueprint-frame">
+                                <img src="images/modelling/3.png" alt="Component Integration">
+                                <div class="stage-marker">Component Integration</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="blueprint-frame">
+                                <img src="images/modelling/4.png" alt="Mechanism Testing">
+                                <div class="stage-marker">Mechanism Testing</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="blueprint-frame">
+                                <img src="images/modelling/5.png" alt="Structural Reinforcement">
+                                <div class="stage-marker">Reinforcement</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="blueprint-frame">
+                                <img src="images/modelling/6.png" alt="Detail Work">
+                                <div class="stage-marker">Detail Work</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="blueprint-frame">
+                                <img src="images/modelling/7.png" alt="Final Adjustments">
+                                <div class="stage-marker">Final Adjustments</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="blueprint-frame">
+                                <img src="images/modelling/8.png" alt="Completed Assembly">
+                                <div class="stage-marker">Completed Assembly</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Specifications -->
+                <div class="details-section">
+                    <h2 class="technical-subtitle">Development Process</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <i class="fas fa-tools"></i>
+                            <h4>Construction Methods</h4>
+                            <ul class="technical-list">
+                                <li>Prototype Building</li>
+                                <li>Material Testing</li>
+                                <li>Assembly Techniques</li>
+                            </ul>
+                        </div>
+                        <div class="spec-card">
+                            <i class="fas fa-cogs"></i>
+                            <h4>Development Stages</h4>
+                            <ul class="technical-list">
+                                <li>Initial Mockup</li>
+                                <li>Iterative Testing</li>
+                                <li>Final Assembly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const downloadBtn = document.querySelector('.download-pdf');
+            downloadBtn.classList.add('downloading');
+            setTimeout(() => {
+                downloadBtn.classList.remove('downloading');
+            }, 1000);
+        }
+    </script>
+</body>
+</html> 

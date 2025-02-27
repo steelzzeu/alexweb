@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthographic Drawings | Alex Gleeson</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">AG</a>
+        <div class="nav-links">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-hero">
+            <div class="blueprint-container">
+                <div class="project-title-group">
+                    <h1 class="technical-title">Orthographic Drawings</h1>
+                    <div class="technical-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-drafting-compass"></i>
+                            Technical Drawing
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            Orthographic Projection
+                        </span>
+                        <a href="#" class="spec-item download-pdf" onclick="downloadPDF()">
+                            <i class="fas fa-file-pdf"></i>
+                            Download Drawings
+                            <div class="download-indicator">
+                                <div class="progress-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="blueprint-container">
+                <!-- Project Introduction -->
+                <div class="project-intro">
+                    <div class="intro-card">
+                        <h2 class="technical-subtitle">Project Overview</h2>
+                        <p class="technical-description">For our major project, we learnt how to draw in different ways. One of the main types of drawing is orthographic drawings which I attempted here.</p>
+                    </div>
+                </div>
+
+                <!-- Orthographic Drawings Display -->
+                <div class="development-timeline">
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="phase-number">01</span>
+                                <h3>First Orthographic Drawing</h3>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="blueprint-frame">
+                                    <img src="images/ortho1.png" alt="First Orthographic Drawing">
+                                    <div class="frame-details">
+                                        <span class="detail-label">Type:</span>
+                                        <span class="detail-value">Technical Drawing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <span class="phase-number">02</span>
+                                <h3>Second Orthographic Drawing</h3>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="blueprint-frame">
+                                    <img src="images/ortho2.png" alt="Second Orthographic Drawing">
+                                    <div class="frame-details">
+                                        <span class="detail-label">Type:</span>
+                                        <span class="detail-value">Technical Drawing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Specifications -->
+                <div class="details-section">
+                    <h2 class="technical-subtitle">Drawing Specifications</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <i class="fas fa-ruler-combined"></i>
+                            <h4>Drawing Features</h4>
+                            <ul class="technical-list">
+                                <li>Multiple Views</li>
+                                <li>Precise Measurements</li>
+                                <li>Technical Standards</li>
+                            </ul>
+                        </div>
+                        <div class="spec-card">
+                            <i class="fas fa-drafting-compass"></i>
+                            <h4>Drawing Types</h4>
+                            <ul class="technical-list">
+                                <li>Front View</li>
+                                <li>Side View</li>
+                                <li>Top View</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const downloadBtn = document.querySelector('.download-pdf');
+            downloadBtn.classList.add('downloading');
+            setTimeout(() => {
+                downloadBtn.classList.remove('downloading');
+            }, 1000);
+        }
+    </script>
+</body>
+</html> 

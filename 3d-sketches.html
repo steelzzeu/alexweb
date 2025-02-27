@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Sketches | Alex Gleeson</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">AG</a>
+        <div class="nav-links">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-hero">
+            <div class="blueprint-container">
+                <div class="project-title-group">
+                    <h1 class="technical-title">3D Sketches</h1>
+                    <div class="technical-specs">
+                        <span class="spec-item">
+                            <i class="fas fa-cube"></i>
+                            3D Development
+                        </span>
+                        <span class="spec-item">
+                            <i class="fas fa-pencil-ruler"></i>
+                            Technical Drawing
+                        </span>
+                        <a href="#" class="spec-item download-pdf" onclick="downloadPDF()">
+                            <i class="fas fa-file-pdf"></i>
+                            Download Specifications
+                            <div class="download-indicator">
+                                <div class="progress-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="blueprint-container">
+                <div class="pinboard">
+                    <div class="sketch-grid">
+                        <div class="sketch-item">
+                            <div class="sketch-content">
+                                <div class="pin"></div>
+                                <img src="images/camera.png" alt="Camera 3D Sketch">
+                                <div class="sketch-details">
+                                    <span class="sketch-number">01</span>
+                                    <span class="sketch-type">Camera Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sketch-item">
+                            <div class="sketch-content">
+                                <div class="pin"></div>
+                                <img src="images/kettle.png" alt="Kettle 3D Sketch">
+                                <div class="sketch-details">
+                                    <span class="sketch-number">02</span>
+                                    <span class="sketch-type">Kettle Study</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sketch-item">
+                            <div class="sketch-content">
+                                <div class="pin"></div>
+                                <img src="images/kettle2.png" alt="Alternative Kettle Design">
+                                <div class="sketch-details">
+                                    <span class="sketch-number">03</span>
+                                    <span class="sketch-type">Kettle Variation</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sketch-item">
+                            <div class="sketch-content">
+                                <div class="pin"></div>
+                                <img src="images/lamp.png" alt="Lamp Design Sketch">
+                                <div class="sketch-details">
+                                    <span class="sketch-number">04</span>
+                                    <span class="sketch-type">Lamp Concept</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Details -->
+                <div class="details-section">
+                    <h2 class="technical-subtitle">Technical Specifications</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <i class="fas fa-drafting-compass"></i>
+                            <h4>Drawing Techniques</h4>
+                            <ul class="technical-list">
+                                <li>Product Sketching</li>
+                                <li>Form Development</li>
+                                <li>Design Iteration</li>
+                            </ul>
+                        </div>
+                        <div class="spec-card">
+                            <i class="fas fa-ruler-combined"></i>
+                            <h4>Product Categories</h4>
+                            <ul class="technical-list">
+                                <li>Photography Equipment</li>
+                                <li>Kitchen Appliances</li>
+                                <li>Lighting Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const downloadBtn = document.querySelector('.download-pdf');
+            downloadBtn.classList.add('downloading');
+            
+            // Here you would add the actual PDF download logic
+            // For now, this is just the animation
+            setTimeout(() => {
+                downloadBtn.classList.remove('downloading');
+                // Trigger actual download here
+            }, 1000);
+        }
+    </script>
+</body>
+</html> 
